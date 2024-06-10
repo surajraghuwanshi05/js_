@@ -19,7 +19,7 @@ let state;
 // string => ""
 // boolean => true/false
 // null => standalone value
-// undefined => 
+// undefined =>  jab apne value define nahi kari 
 // symbol => unique
 
 
