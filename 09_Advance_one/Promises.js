@@ -65,3 +65,50 @@ promiseFour
     console.log(error);
 }).finally(()=> console.log("the promise is either resolved or rejected"))
 
+const promiseFive = new Promise(function(resolve, reject){
+    setTimeout(function () {
+        let err = true
+        if (!err) {
+            resolve({username:"javascript", password:"123"})
+            
+        }else{reject('Error; js Went wrong ')}
+    },1000)
+});
+
+ // you can use this syntex too
+async function consumePromiseFive(){
+    try{
+        const response = await promiseFive
+    console.log(response);
+    } catch(error){
+        console.log(error)
+    }
+}
+
+consumePromiseFive()
+
+
+// async function getALlUserds(){
+//     try{
+//         const response = await fetch("https://jsonplaceholder.typicode.com/users")
+
+//     const data = response.json()
+//     } catch{
+//         console.log("E:", error);
+//     }
+// }
+
+// getALlUserds()
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then((response)=>{
+    return response.json()
+})
+.then((data)=>{
+    console.log(data);
+})
+.catch((error)=> console.log(error))
+
+
+
+
