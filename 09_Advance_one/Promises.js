@@ -88,17 +88,17 @@ async function consumePromiseFive(){
 consumePromiseFive()
 
 
-// async function getALlUserds(){
-//     try{
-//         const response = await fetch("https://jsonplaceholder.typicode.com/users")
+async function getALlUserds(){
+    try{
+        const response = await fetch("https://jsonplaceholder.typicode.com/users")
 
-//     const data = response.json()
-//     } catch{
-//         console.log("E:", error);
-//     }
-// }
+    const data = response.json()
+    } catch{
+        console.log("E:", error);
+    }
+}
 
-// getALlUserds()
+getALlUserds()
 
 fetch("https://jsonplaceholder.typicode.com/users")
 .then((response)=>{
