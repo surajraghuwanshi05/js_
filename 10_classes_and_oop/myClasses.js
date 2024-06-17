@@ -1,4 +1,4 @@
-ES6 ke bad
+// ES6 ke bad
 
 class User {
     constructor (username, email, password){
